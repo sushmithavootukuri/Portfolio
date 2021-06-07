@@ -39,7 +39,7 @@ html::-webkit-scrollbar-thumb{
 
 body{
     
-    background-color: black;
+    background-color: rgb(27, 26, 26);
     overflow-x: hidden;
     padding-left: 3rem;
     padding-right: 9rem;
@@ -121,7 +121,7 @@ section{
       transition: .3s;
       margin: 20px 0;
       border-radius: 50%;
-      background: #2b2a2a;
+      background: black;
     }
   
     header ul.icon-menu li.icon-box:hover,
@@ -221,7 +221,7 @@ header .navbar ul li a{
     display: block;
     padding:1rem;
     margin:1.5rem 0;
-    background:#333;
+    background: black;
     color:#fff;
     font-size: 2rem;
     border-radius: 5rem;
@@ -377,6 +377,7 @@ margin: 3rem;
   text-decoration: none;   
   }
 
+
   .hide-section {
     display: none;
   }
@@ -418,7 +419,7 @@ margin: 3rem;
 .education ul li {
   position: relative;
   margin-left: 30px;
-  background : #1b1a1a;
+  background : black;
   
   padding: 14px;
   border-radius: 6px;
@@ -520,32 +521,135 @@ margin-bottom: 1.5rem;
 
 }
 
-.portfolio .box-container{
-    display: flex;
-    align-items: center;
+.portfolio .box{
+    display : flex;
     justify-content: center;
+    flex-direction: row;
+    margin: 5rem;
+    padding: 5rem;
+    background : black;
+    box-shadow: 5px 5px 15px rgba(138, 134, 134, 0.3);
     flex-wrap: wrap;
-    padding:2rem 0;
 }
 
-.portfolio .box-container .box{
-    height: 20rem;
-    width:26rem;
-    border-radius: 1rem;
-    margin:2rem;
-    overflow: hidden;
-    cursor: pointer;
+
+  .project-container {
+    
+    margin: 30px;
+    width: 400px;
+    height: 240px;
+    perspective: 1000px;
+    
+ }
+  
+  .project-container img {
+  width: 100%;
+    height: 100%;
+    
+  }
+
+  .project-body {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all .8s linear;
+ 
+  }
+  
+  .project-body:hover {
+    transform: rotateY(-180deg);
+   }
+  
+    .face {
+        position: absolute;
+       
+        width: 100%;
+        height: 100%;
+       
+      }
+      .back {
+       
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        opacity: .7;
+        box-shadow: 5px 5px 20px rgba(138, 134, 134, 0.3);
+      }
+ 
+
+.face, .project-container img{
+    border-radius: 20px;
 }
 
-.portfolio .box-container .box img{
-    height:100%;
-    width:100%;
-    object-fit: cover;
+.project-title{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
 }
 
-.portfolio .box-container .box:hover img{
-    transform: scale(1.2);
+.project-title {
+    color: black;
+    font-weight: bolder;
+    font-size: 3rem;
+    position: relative;
+    top: -20px;
+    background-color: rgb(255, 247, 247);
+ padding: 10px;
+ display: flex;
+ justify-content: space-around;
 }
+
+.project-title h1{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.project-title a{
+    text-decoration: none;
+width: 4rem;
+height: 4rem;
+}
+
+@media  (max-width:1260px) {
+    
+  .project-container {
+      width: 330px;
+      height: 200px;
+
+      }
+    
+}
+
+@media  (max-width:993px) {
+    
+    .project-container {
+        width: 360px;
+        margin: 30px 15px;
+    }
+   
+}
+
+@media  (max-width:440px) {
+    
+    .portfolio .box {
+          
+        margin: 2rem;
+    }
+
+    .project-container {
+    
+ height: 170px;
+
+}
+       
+}
+
+
 
 .contact .row{
     display: flex;
