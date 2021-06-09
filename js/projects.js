@@ -78,15 +78,15 @@ const createProjectCard = (project) => {
 
 
     let backFace = getElement("div", "back face");
-    let desc = document.createElement("h1");
+    let desc = document.createElement("h3");
     desc.innerText = "Description";
     let descText = document.createElement("p");
     descText.innerText = project.description;
-    let skills = document.createElement("h1");
+    let skills = document.createElement("h3");
     skills.innerText = "Skills";
     let skillsText = document.createElement("p");
     skillsText.innerText = project.skills;
-    let impl = document.createElement("h1");
+    let impl = document.createElement("h3");
     impl.innerText = "What is Implemented";
     let implText = document.createElement("p");
     implText.innerText = project.implemented;

@@ -3,6 +3,9 @@
 :root{
     --yellow:#f9ca24;
     --white: #fff;
+     --gray:  rgb(32, 31, 31);
+     --textColor:rgb(218, 205, 205);
+     
 }
 
 *{
@@ -13,6 +16,7 @@
     outline: none; border:none;
     text-transform: capitalize;
     transition: all .2s linear;
+  
 }
 
 *::selection{
@@ -39,11 +43,11 @@ html::-webkit-scrollbar-thumb{
 
 body{
     
-    background-color: rgb(27, 26, 26);
+    background-color: var(--gray);
     overflow-x: hidden;
     padding-left: 3rem;
     padding-right: 9rem;
-    color: var(--white);
+    color: var(--textColor);
 }
 
 section{
@@ -53,8 +57,8 @@ section{
 
 .btn{
     padding:.7rem 3rem;
-    background:#333;
-    color:#fff;
+    background: black;
+   color: var(--textColor);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
@@ -68,6 +72,7 @@ section{
 
 .btn:hover{
     background:var(--yellow);
+    color: black;
 }
 
 .heading{
@@ -76,7 +81,7 @@ section{
     font-size: 4rem;
     padding:1rem;
     border-bottom: .1rem solid #fff4;
-    color:#fff;
+  
 }
 
 .heading span{
@@ -130,7 +135,7 @@ section{
     }
 
         header ul.icon-menu li.icon-box i {
-      color: #ddd;
+          color: var(--textColor);
       font-size: 19px;
       transition: .3s;
     }
@@ -139,7 +144,7 @@ section{
     header ul.icon-menu li.icon-box:hover,
     header ul.icon-menu li.icon-box.active i,
     header ul.icon-menu li.icon-box:hover i {
-      color: #fff;
+      color: black;
     }
   
     header .icon-box h2 {
@@ -176,7 +181,7 @@ section{
       top: 0;
       right: 0;
       opacity: 0;
-      color: #fff;
+      color: var(--textColor);
       line-height: 50px;
       font-weight: 500;
       transition: all .3s;
@@ -193,6 +198,8 @@ section{
       text-align: center;
       border-radius: 30px 0 0 30px;
       background:var(--yellow);
+      color: black;
+      font-weight: bolder;
     }
   }
       
@@ -249,16 +256,17 @@ header .navbar ul li a:hover{
     justify-content: center;
     flex-flow: column;
     padding:0 15rem;
+  
 }
 
 .home h3{
     font-size: 2.5rem;
-    color:#fff;
+    color: var(--textColor);
 }
 
 .home h1{
     font-size:4rem;
-    color:#fff;
+    color: var(--textColor);
 }
 
 .home h1 span{
@@ -271,12 +279,19 @@ header .navbar ul li a:hover{
     padding: 1rem 0;
 }
 
+.about-info {
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(65, 61, 61, 0.3);
+  margin:1.5% 4%;
+  padding : 1% 1% 1% 2%;
+}
 .about-info h3{
   
     line-height: 2.3em;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     letter-spacing: 0.5rem;
-    padding-top: 5rem;
+    padding-top: 4rem;
   
 }
 
@@ -285,82 +300,29 @@ header .navbar ul li a:hover{
     src: url(../fonts/BrittanySignature.ttf);
 }
   
-.signature {
-    font-family: mySignatureFont;
+.signature{
+  display: flex;
+  justify-content: flex-end;
+}
+.signature h1{
+  font-family: mySignatureFont;
    color: var(--yellow);
    font-weight: bolder;
-   font-size: 5rem;
+   font-size: 3rem;
    letter-spacing: 0.5rem;
+   padding : 6px;
 }
 
 
-/* .about .row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:1rem 0;
-}
-
-.about .row .info{
-    flex:1 1 48rem;
-    padding:2rem 1rem;
-    padding-left: 6rem;
-}
-
-.about .row .info h3{
-    font-size: 2rem;
-    color:var(--yellow);
-    padding:1rem 0;
-    font-weight: normal;
-}
-
-.about .row .info h3 span{
-    color:#eee;
-    padding:0 .5rem;
-} */
-
-/*
-To be removed
-.about .row .counter{
-    flex:1 1 48rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.about .row .counter .box{
-    width:20rem;
-
-
-
-
-
-    background:#222;
-    text-align: center;
-    padding: 2rem;
-    margin:2rem;
-}
-
-.about .row .counter .box span{
-    font-size: 4rem;
-    color:var(--yellow);
-}
-
-.about .row .counter .box h3{
-    font-size: 2rem;
-    color:#fff;
-} */
-
-
-.resume a button {
-      margin: 2rem;
+.resume-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .resume button {
-
 font-weight: bold;
-margin: 3rem;
+margin: 2%;
 }
 
 .resume button.active,
@@ -373,29 +335,62 @@ margin: 3rem;
 .center{
     text-align: center;
 }
-.resume a{
-  text-decoration: none;   
-  }
-
 
   .hide-section {
     display: none;
   }
-  .view-section {
-    display: block;
+ 
+  div.skills { 
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2%;
+  }
+  
+  div.skills div {
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(65, 61, 61, 0.3);
+   padding: 10px;
+  margin : 1%;
+  flex: 21%;
+    }
+
+  div.skills h2 {
+     font-size: 4rem;
+     margin-top: 2rem;
+     margin-bottom: 4rem;
   }
 
-  section.skills h2 {
-     font-size: 4rem;
-     margin: 4rem 0;
-
-          }
-
-      section.skills span {
+      div.skills span {
         display: block;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 2rem 0;
          }
+
+         @media (max-width: 850px) {
+          div.skills div {
+            flex: 45%;
+            margin : 2%;
+          }
+        }
+
+        @media (max-width: 600px) {
+          div.skills div {
+            flex: 100%;
+            margin-left: 10%;
+            margin-right: 10%;
+          }
+        }
+
+section.experience > div{
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(65, 61, 61, 0.3);
+padding-left : 40px;
+padding-bottom: 50px;
+}
 
 .education{
     font-size: 1.8rem;
@@ -419,12 +414,10 @@ margin: 3rem;
 .education ul li {
   position: relative;
   margin-left: 30px;
-  background : black;
-  
+  background-color: var(--gray);
   padding: 14px;
-  border-radius: 6px;
-
-box-shadow: 5px 5px 10px #2b2929;
+  border-radius: 15px;
+box-shadow: 5px 5px 10px #141414;
 }
 .education ul li:not(:first-child) {
   margin-top: 60px;
@@ -484,7 +477,7 @@ box-shadow: 5px 5px 10px #2b2929;
 .education span.number span {
   position: absolute;
   font-size: 2rem;
-  left: -6rem;
+  left: -8rem;
   font-weight: bolder;
 }
 .education span.number span:first-child {
@@ -494,9 +487,17 @@ box-shadow: 5px 5px 10px #2b2929;
   top: 95%;
 }
 
+.achievements-info{
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(65, 61, 61, 0.3);
+  margin: 0 5%;
+  padding : 5%;
+  
+}
 .achievements-info h3{
   
-  line-height: 2.3em;
+  line-height: 2em;
   font-size: 2.3rem;
   letter-spacing: 0.3rem;
  
@@ -513,8 +514,7 @@ margin-bottom: 1.5rem;
   color: var(--yellow);
   font-size: 4rem;
   font-weight: bolder;
-  
-}
+  }
 .achievements-info li  h3
  {
   display:inline;
@@ -525,18 +525,13 @@ margin-bottom: 1.5rem;
     display : flex;
     justify-content: center;
     flex-direction: row;
-    margin: 5rem;
-    padding: 5rem;
-    background : black;
-    box-shadow: 5px 5px 15px rgba(138, 134, 134, 0.3);
     flex-wrap: wrap;
 }
 
-
   .project-container {
-    
-    margin: 30px;
-    width: 400px;
+ 
+    margin: 40px;
+    width: 450px;
     height: 240px;
     perspective: 1000px;
     
@@ -563,22 +558,29 @@ margin-bottom: 1.5rem;
   
     .face {
         position: absolute;
-       
-        width: 100%;
+               width: 100%;
         height: 100%;
        
       }
       .back {
-       
         display: block;
         transform: rotateY(180deg);
         box-sizing: border-box;
         padding: 10px;
-        text-align: center;
-        opacity: .7;
-        box-shadow: 5px 5px 20px rgba(138, 134, 134, 0.3);
+        /* text-align: center; */
+        opacity: 1;
+        background-color: black;
+        box-shadow: 5px 5px 20px rgba(73, 71, 71, 0.3);
       }
- 
+
+      .back p{
+font-size: 1.4rem;
+opacity: 0.9;
+      }
+      .back h3{
+      font-weight: bolder;
+              }
+
 
 .face, .project-container img{
     border-radius: 20px;
@@ -611,8 +613,8 @@ margin-bottom: 1.5rem;
 }
 .project-title a{
     text-decoration: none;
-width: 4rem;
-height: 4rem;
+   width: 3rem;
+  height: 3rem;
 }
 
 @media  (max-width:1260px) {
@@ -674,8 +676,8 @@ height: 4rem;
 .contact .row form .box{
     padding:1.5rem;
     margin:1rem 0;
-    background : #2b2a2a;
-    color:#fff;
+    background : var(--gray);
+    color: var(--textColor);
     text-transform: none;
     font-size: 1.7rem;
     width:100%;
@@ -692,7 +694,7 @@ height: 4rem;
 
 .contact .row .content .title{
     text-transform: uppercase;
-    color:#fff;
+ 
     font-size: 3rem;
     padding-bottom: 2rem;
 }
@@ -701,7 +703,7 @@ height: 4rem;
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color:#eee;
+  
     padding:1rem 0;
     font-weight: normal;
 }
