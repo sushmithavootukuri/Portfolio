@@ -72,3 +72,13 @@ achievementsBtn.onclick = () => {
   experienceBtn.classList.remove("active");
   achievementsBtn.classList.add("active");
 }
+
+
+window.onresize = () => {
+
+  if (screen.width >= 992) {
+    var link = document.getElementById("navbar-collapse-toggle").style.display = "block";
+  }
+
+}
+

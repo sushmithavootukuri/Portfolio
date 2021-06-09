@@ -19,9 +19,9 @@
     <!-- header section starts  -->
 
 
-    <header id="navbar-collapse-toggle">
+    <header id="header">
 
-        <ul class="icon-menu">
+        <ul id="navbar-collapse-toggle" class="icon-menu ">
             <li class="icon-box active">
                 <i class="fa fa-home"></i>
                 <a href="#home">
@@ -56,15 +56,36 @@
 
         </ul>
 
+        <a class="icon d-lg-none" onclick="toggleNavbar()">
+            <i class="fa fa-bars"></i>
+        </a>
 
 
     </header>
 
     <!-- header section ends -->
 
+    <script>
+        var header = document.getElementById("header");
+        var navList = header.getElementsByTagName("a");
 
+        for (i = 0; i < navList.length; i++) {
+            navList[i].onclick = toggleNavbar;
+        }
 
-    <div id="menu" class="fas fa-bars"></div>
+        function toggleNavbar() {
+            if (screen.width < 992) {
+
+                var link = document.getElementById("navbar-collapse-toggle");
+                if (link.style.display === "block") {
+                    link.style.display = "none";
+                } else {
+                    link.style.display = "block";
+                }
+            }
+        }
+    </script>
+
 
     <!-- home section starts  -->
 
@@ -238,7 +259,7 @@
                             <li>
                                 <h3>
                                     <span>R</span>ecognised as Excellent Performer twice in 2019 and 2021 with REWARDS
-                                    AND RECOGNITION AWARD
+                                    AND RECOGNITION AWARD at HCL Technologies.
 
                                 </h3>
                             </li>
