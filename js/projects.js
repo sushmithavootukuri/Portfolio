@@ -42,7 +42,7 @@ let allProjects =
             "type": "frontend"
         },
         {
-            "title": "Recipe Appp",
+            "title": "Recipe App",
             "description": "Recipe App that displays various recipes and allows user to create custom recipes",
             "img": "images/recipes.png",
             "skills": "React, Routes, CSS, Bootstrap, Axios",
