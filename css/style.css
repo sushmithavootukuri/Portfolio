@@ -43,12 +43,15 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    
-    background-color: var(--gray);
-    overflow-x: hidden;
+        overflow-x: hidden;
     padding-left: 3rem;
     padding-right: 9rem;
     color: var(--textColor);
+
+    /* background: url("https://i.pinimg.com/originals/f2/f5/28/f2f5283b4110eb99c615ab03810ce3aa.jpg"); */
+  /* background: url("https://wallpaperaccess.com/full/309166.jpg"); */
+  background-image: url("../images/bg.jpg");
+   background-size: cover;
 }
 
 section{
