@@ -1,49 +1,54 @@
-let projectsData =
+let allProjects =
     [
         {
             "title": "proj1",
-            "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
+            "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf,  lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
             "img": "images/notes.png",
             "skills": "React, CSS, Node.js, Mongo DB.",
             "implemented": "Authentication, Jwt, CRUD operatiosns",
             "guthub": "#",
-            "demo": "#"
+            "demo": "#",
+            "type": "fullstack"
         },
         {
-            "title": "proj1",
+            "title": "Pizza Delivery",
             "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
-            "img": "images/notes.png",
+            "img": "images/pizza-delivery.png",
             "skills": "React, CSS, Node.js, Mongo DB.",
             "implemented": "Authentication, Jwt, CRUD operatiosns",
             "guthub": "#",
-            "demo": "#"
+            "demo": "#",
+            "type": "frontend"
         },
         {
-            "title": "proj1",
+            "title": "proj3",
             "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
             "img": "images/notes.png",
             "skills": "React, CSS, Node.js, Mongo DB.",
             "implemented": "Authentication, Jwt, CRUD operatiosns",
             "guthub": "#",
-            "demo": "#"
+            "demo": "#",
+            "type": "fullstack"
         },
         {
-            "title": "proj1",
+            "title": "proj4",
             "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
             "img": "images/notes.png",
             "skills": "React, CSS, Node.js, Mongo DB.",
             "implemented": "Authentication, Jwt, CRUD operatiosns",
             "guthub": "#",
-            "demo": "#"
+            "demo": "#",
+            "type": "fullstack"
         },
         {
-            "title": "proj1",
+            "title": "proj5",
             "description": "lorem ipsum lorem ipsum ;lorem psum sdv sdfsd f sdfsdf sdfsdgsfgv sfsdf",
             "img": "images/notes.png",
             "skills": "React, CSS, Node.js, Mongo DB.",
             "implemented": "Authentication, Jwt, CRUD operatiosns",
             "guthub": "#",
-            "demo": "#"
+            "demo": "#",
+            "type": "frontend"
         }
     ]
 
@@ -79,19 +84,22 @@ const createProjectCard = (project) => {
 
     let backFace = getElement("div", "back face");
     let desc = document.createElement("h3");
-    desc.innerText = "Description";
+    desc.innerText = "Description : ";
     let descText = document.createElement("p");
     descText.innerText = project.description;
     let skills = document.createElement("h3");
-    skills.innerText = "Skills";
+    skills.innerText = "Skills : ";
     let skillsText = document.createElement("p");
     skillsText.innerText = project.skills;
     let impl = document.createElement("h3");
-    impl.innerText = "What is Implemented";
+    impl.innerText = "Implemented : ";
     let implText = document.createElement("p");
     implText.innerText = project.implemented;
-
-    backFace.append(desc, descText, skills, skillsText, impl, implText);
+    let brTag1 = document.createElement("br");
+    let brTag2 = document.createElement("br");
+    let brTag3 = document.createElement("br");
+    let brTag4 = document.createElement("br");
+    backFace.append(desc, descText, brTag1, brTag2, skills, skillsText, brTag3, brTag4, impl, implText);
 
     projectBody.append(frontFace, backFace);
 
@@ -122,10 +130,58 @@ const createProjectCard = (project) => {
 let projects = document.getElementById("projects");
 
 
-projectsData.forEach(project => {
-
+allProjects.forEach(project => {
     let projectCard = createProjectCard(project);
     projects.append(projectCard);
 });
 
 
+let fullstackProjects = allProjects.filter((project) => project.type === "fullstack");
+let frontendProjects = allProjects.filter((project) => project.type === "frontend");
+
+let allBtn = document.getElementById("all-btn");
+let fullstackBtn = document.getElementById("fullstack-btn");
+let frontendBtn = document.getElementById("frontend-btn");
+
+allBtn.onclick = () => {
+
+
+    allBtn.classList.add("active");
+    fullstackBtn.classList.remove("active");
+    frontendBtn.classList.remove("active");
+
+    projects.innerHTML = '';
+    allProjects.forEach(project => {
+        let projectCard = createProjectCard(project);
+        projects.append(projectCard);
+    });
+}
+
+
+fullstackBtn.onclick = () => {
+
+    allBtn.classList.remove("active");
+    fullstackBtn.classList.add("active");
+    frontendBtn.classList.remove("active");
+
+    projects.innerHTML = '';
+    fullstackProjects.forEach(project => {
+        let projectCard = createProjectCard(project);
+        projects.append(projectCard);
+    });
+
+}
+
+frontendBtn.onclick = () => {
+
+    allBtn.classList.remove("active");
+    fullstackBtn.classList.remove("active");
+    frontendBtn.classList.add("active");
+
+    projects.innerHTML = '';
+    frontendProjects.forEach(project => {
+        let projectCard = createProjectCard(project);
+        projects.append(projectCard);
+    });
+
+}

@@ -74,11 +74,32 @@ achievementsBtn.onclick = () => {
 }
 
 
-window.onresize = () => {
+//Responsive navbar
+var header = document.getElementById("header");
+var navList = header.getElementsByTagName("a");
 
-  if (screen.width >= 992) {
-    var link = document.getElementById("navbar-collapse-toggle").style.display = "block";
+for (i = 0; i < navList.length; i++) {
+  navList[i].onclick = toggleNavbar;
+}
+
+function toggleNavbar() {
+  if (screen.width < 992) {
+
+    var link = document.getElementById("navbar-collapse-toggle");
+    if (link.style.display === "block") {
+      link.style.display = "none";
+    } else {
+      link.style.display = "block";
+    }
   }
+}
 
+window.onresize = () => {
+  if (screen.width < 992) {
+    document.getElementById("navbar-collapse-toggle").style.display = "none";
+  }
+  else {
+    document.getElementById("navbar-collapse-toggle").style.display = "block";
+  }
 }
 
