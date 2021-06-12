@@ -64,6 +64,7 @@ section{
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
+    border: 1px solid var(--yellow);
 }
 
 .btn i{
@@ -203,6 +204,8 @@ section{
       color: black;
       font-weight: bolder;
     }
+
+   
   }
       
 
@@ -330,7 +333,19 @@ header .navbar ul li a:hover{
     color:#eee;
     padding: 1rem 0;
 }
+.profile-div{
+background-color: black;
+padding: 25px;
+border-radius: 25px;
+box-shadow: 3px 3px 10px 10px rgba(68, 68, 67, 0.3);
+}
 
+.profile{
+    border-radius: 25px;
+  
+  width : 100%;
+  height : 100%;
+}
 
 .about-info {
   background-color: black;
@@ -372,7 +387,7 @@ header .navbar ul li a:hover{
   flex-wrap: wrap;
   }
   
-  .projects-nav button{
+  .projects-nav button,  .projects-nav a{
    margin: 2rem;
     }
 
@@ -731,7 +746,7 @@ display : inline;
 }
 
 .contact .contact-card .info{
-  margin-top: 4rem;
+  margin: 4rem;
        padding:4rem;
        letter-spacing: 0.4rem;
      
@@ -763,7 +778,15 @@ display : inline;
     display: none;
 }
 
+.social-media{
+  display: flex;
+  justify-content: center;
+ 
+}
 
+.social-media a{
+margin : 3rem;
+}
 
 
 
@@ -829,6 +852,21 @@ display : inline;
     .achievements-info li h3 span {
       font-size: 2.5rem;
     }
+
+    .contact .contact-card .info h3{
+    
+      font-size: 1.7rem;
+      
+  }
+
+  .contact .contact-card .info{
+    margin: 4rem;
+         padding:4rem;
+         letter-spacing: 0.1rem;
+       
+        
+  }
+ 
 
  }
 

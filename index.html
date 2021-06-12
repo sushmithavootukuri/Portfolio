@@ -56,7 +56,7 @@
 
         </ul>
 
-        <a class="icon d-lg-none" onclick="toggleNavbar()">
+        <a id="nav-icon" class="icon d-lg-none">
             <i class="fa fa-bars"></i>
         </a>
 
@@ -64,27 +64,6 @@
     </header>
 
     <!-- header section ends -->
-
-    <script>
-        var header = document.getElementById("header");
-        var navList = header.getElementsByTagName("a");
-
-        for (i = 0; i < navList.length; i++) {
-            navList[i].onclick = toggleNavbar;
-        }
-
-        function toggleNavbar() {
-            if (screen.width < 992) {
-
-                var link = document.getElementById("navbar-collapse-toggle");
-                if (link.style.display === "block") {
-                    link.style.display = "none";
-                } else {
-                    link.style.display = "block";
-                }
-            }
-        }
-    </script>
 
 
     <!-- home section starts  -->
@@ -94,10 +73,10 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-xs-6">
-                    <div class="card w-75">
-                        <img src="images/pic.jpg" class="card-img-top img-fluid" alt="">
-                    </div>
+                <div class="col-md-4 col-xs-6 profile-div">
+
+                    <img src="images/pic.jpg" class="profile" alt="">
+
                 </div>
                 <div class="col-md-8">
                     <h3>Hi, I'M</h3>
@@ -146,8 +125,10 @@
 
         <div class="center projects-nav">
             <button id="all-btn" class="btn active">All</button>
-            <button id="fullstack-btn" class="btn">Full Stack</button>
+            <button id="fullstack-btn" class="btn ">Full Stack</button>
             <button id="frontend-btn" class="btn">Frontend</button>
+   <a href="https://github.com/sushmithavootukuri?tab=repositories" target="_blank" class="btn">Others</a>
+          
         </div>
 
         <div id="projects" class="box">
@@ -164,15 +145,19 @@
 
         <div class="resume">
             <div class="center resume-nav">
+              
                 <button id="skills-btn" class="btn active">Skills</button>
                 <button id="experience-btn" class="btn">Experience and Education</button>
-                <button id="achievements-btn" class="btn">Achievements</button>
+                <button id="achievements-btn" class="btn ">Achievements</button>
 
             </div>
 
             <div id="resume-div" class="mx-auto">
 
-                <section id="skills">
+              
+
+
+                <section id="skills" class="skills section">
                     <div class="skills">
                         <div>
                             <h2>Front End</h2>
@@ -302,7 +287,8 @@
 
 
                     </div>
-
+                </section>
+               
             </div>
         </div>
     </section>
@@ -322,8 +308,6 @@
 
         <h1 class="heading"> <span>contact</span> me </h1>
 
-
-
         <div class="contact-card">
 
             <div class="info">
@@ -335,19 +319,16 @@
 
         </div>
 
-
+        <div class="social-media">
+            <a href="https://github.com/sushmithavootukuri" target="_blank" class="btn">Github</a>
+            <a href="#about" target="_blank" class="btn">Linkedin</a>
+        </div>
 
 
     </section>
 
     <!-- contact section ends -->
 
-
-    <!-- scroll top button  -->
-
-    <!-- <a href="#home" class="top">
-        <img src="images/scroll-top-img.png" alt="">
-    </a> -->
 
 
     <!-- jquery cdn link  -->

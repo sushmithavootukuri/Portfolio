@@ -78,12 +78,12 @@ achievementsBtn.onclick = () => {
 var header = document.getElementById("header");
 var navList = header.getElementsByTagName("a");
 
-for (i = 0; i < navList.length; i++) {
-  navList[i].onclick = toggleNavbar;
-}
+
+
+
 
 function toggleNavbar() {
-  if (screen.width < 992) {
+  
 
     var link = document.getElementById("navbar-collapse-toggle");
     if (link.style.display === "block") {
@@ -91,6 +91,15 @@ function toggleNavbar() {
     } else {
       link.style.display = "block";
     }
+  
+}
+
+var navIcon = document.getElementById("nav-icon");
+navIcon.onclick = toggleNavbar;
+
+for (i = 0; i < navList.length; i++) {
+  if (screen.width < 992) {
+  navList[i].onclick = toggleNavbar;
   }
 }
 
