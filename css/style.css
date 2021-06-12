@@ -333,17 +333,20 @@ header .navbar ul li a:hover{
     color:#eee;
     padding: 1rem 0;
 }
-.profile-div{
+
+ /* .profile-div{
 background-color: black;
 padding: 25px;
 border-radius: 25px;
 box-shadow: 3px 3px 10px 10px rgba(68, 68, 67, 0.3);
-}
+}  */
 
 .profile{
-    border-radius: 25px;
-  
-  width : 100%;
+    border-radius: 10px;
+
+  border : 25px solid black;
+  box-shadow: 3px 3px 10px 10px rgba(68, 68, 67, 0.3);
+  width :85%;
   height : 100%;
 }
 
@@ -608,6 +611,16 @@ margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
+.portfolio p{
+  display : flex;
+  justify-content: center;
+  opacity: 1;
+  font-size: 2rem;
+}
+
+.portfolio p span{
+  color : var(--yellow);
+}
   .project-container {
  
     margin: 40px;
