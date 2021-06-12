@@ -351,8 +351,8 @@ header .navbar ul li a:hover{
     border-radius: 10px;
   border : 2rem solid black;
   box-shadow: 3px 3px 10px 10px rgba(68, 68, 67, 0.3);
-  width :85%;
-  height : 100%;
+  width : 90%;
+  height : 90%;
 }
 
 
@@ -845,15 +845,14 @@ margin : 3rem;
         font-size: 50%;
     }
  
-    .desktop{
-      display: none;
-    }
+  
   
     .profile{
+      margin-top: 6rem;
       border-radius: 50%;
     border : 10px solid black;
-      width :50%;
-    height : 100%;
+      width :45%;
+    height : 80%;
   
   }
   
@@ -915,9 +914,8 @@ margin : 3rem;
 
 
   .profile{
- 
-    width :70%;
-}
+     width :60%;
+   }
 
 
 
