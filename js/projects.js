@@ -65,7 +65,7 @@ let allProjects =
         {
             "title": "Simple Calculator",
             "description": "An online calculator with basic Mathematical operations",
-            "img": "images/calculator.png",
+            "img": "images/calculator.jpeg",
             "skills": "HTML, CSS, Javascript",
             "implemented": "Calculator designed without using in built eval function",
             "github": "https://github.com/sushmithavootukuri/Simple-calculator",
