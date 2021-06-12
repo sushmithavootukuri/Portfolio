@@ -78,7 +78,7 @@ let allProjects =
             "img": "images/weather.png",
             "skills": "HTML, CSS, Bootstrap4, JavaScript",
             "implemented": "Fetching data from openweather api, Bootstrap card design",
-            "github": "#",
+            "github": "https://github.com/sushmithavootukuri/weather-studio",
             "demo": "https://weather-studio.netlify.app/",
             "type": "frontend"
         }
