@@ -20,7 +20,7 @@ let allProjects =
             "demo": "https://s-notes.netlify.app/",
             "type": "fullstack"
         },
-       
+
         {
             "title": "Secret Messenger",
             "description": "Secret Messenger is designed to let users send or view secret messages anonymously",
@@ -61,7 +61,7 @@ let allProjects =
             "demo": "https://trivia-quiz-sushmitha.netlify.app/",
             "type": "frontend"
         },
-      
+
         {
             "title": "Simple Calculator",
             "description": "An online calculator with basic Mathematical operations",
@@ -108,7 +108,7 @@ const createProjectCard = (project) => {
 
     let projectBody = getElement("div", "project-body");
 
-    let frontFace = getElement("div", "front face");
+    let frontFace = getElement("div", "front front-face");
     let projectImage = getImgElement(project.img, project.title);
 
     frontFace.append(projectImage);
@@ -135,22 +135,20 @@ const createProjectCard = (project) => {
 
     projectBody.append(frontFace, backFace);
 
-
-
     let projectTitleDiv = getElement("div", "project-title");
     let projectTitle = document.createElement("h1");
     projectTitle.innerText = project.title;
 
     let github = document.createElement("a");
     github.setAttribute("href", project.github);
-    github.setAttribute("target","_blank");
+    github.setAttribute("target", "_blank");
     let githubIcon = getImgElement("images/github.png", "Github Icon");
     github.append(githubIcon);
 
 
     let demoLink = document.createElement("a");
     demoLink.setAttribute("href", project.demo);
-    demoLink.setAttribute("target","_blank");
+    demoLink.setAttribute("target", "_blank");
     let deployIcon = getImgElement("images/cloud.png", "Cloud Icon");
     demoLink.append(deployIcon);
 
@@ -175,8 +173,6 @@ allProjects.forEach(project => {
     let projectCard = createProjectCard(project);
     projects.append(projectCard);
 });
-
-
 
 fullstackBtn.onclick = () => {
 
